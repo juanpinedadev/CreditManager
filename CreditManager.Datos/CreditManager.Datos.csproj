@@ -46,6 +46,7 @@
     <Compile Include="Interface\IClienteRepositorio.cs" />
     <Compile Include="Interface\IRepositorioGenerico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\ClienteRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CreditManager.Entidad\CreditManager.Entidad.csproj">
@@ -53,8 +54,6 @@
       <Name>CreditManager.Entidad</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositorio\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
