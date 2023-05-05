@@ -65,8 +65,8 @@ namespace CreditManager.Presentacion.Formulario
             else
             {
                 this.Hide();
-                //FormularioPrincipal dashboard = new FormularioPrincipal();
-                //dashboard.Show();
+                FormularioPrincipal principal = new FormularioPrincipal();
+                principal.Show();
             }
         }
         #endregion

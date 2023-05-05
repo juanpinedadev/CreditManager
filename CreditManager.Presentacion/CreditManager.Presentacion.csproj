@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,10 +55,19 @@
     <Compile Include="Formulario\FormularioLogin.Designer.cs">
       <DependentUpon>FormularioLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulario\FormularioPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FormularioPrincipal.Designer.cs">
+      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formulario\FormularioLogin.resx">
       <DependentUpon>FormularioLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormularioPrincipal.resx">
+      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,6 +77,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -90,10 +103,34 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Imagen\" />
+    <Folder Include="Imagen\16px\" />
     <Folder Include="Reporte\DataSet\" />
     <Folder Include="Reporte\Diseño\" />
     <Folder Include="Reporte\Formularios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagen\24px\imgCerrarSesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagen\24px\imgCliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagen\24px\imgEmpleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagen\24px\imgInicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagen\24px\imgPago.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagen\24px\imgPrestamo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagen\24px\imgReporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icono.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
