@@ -63,6 +63,26 @@ namespace CreditManager.Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgActualizar {
+            get {
+                object obj = ResourceManager.GetObject("imgActualizar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgAgregar {
+            get {
+                object obj = ResourceManager.GetObject("imgAgregar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgCerrarSesion {
             get {
                 object obj = ResourceManager.GetObject("imgCerrarSesion", resourceCulture);
@@ -83,6 +103,16 @@ namespace CreditManager.Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgEliminar {
+            get {
+                object obj = ResourceManager.GetObject("imgEliminar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgEmpleado {
             get {
                 object obj = ResourceManager.GetObject("imgEmpleado", resourceCulture);
@@ -93,9 +123,29 @@ namespace CreditManager.Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgGuardar {
+            get {
+                object obj = ResourceManager.GetObject("imgGuardar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgInicio {
             get {
                 object obj = ResourceManager.GetObject("imgInicio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgLimpiar {
+            get {
+                object obj = ResourceManager.GetObject("imgLimpiar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +176,26 @@ namespace CreditManager.Presentacion.Properties {
         internal static System.Drawing.Bitmap imgReporte {
             get {
                 object obj = ResourceManager.GetObject("imgReporte", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgReportePequeño {
+            get {
+                object obj = ResourceManager.GetObject("imgReportePequeño", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgRetornar {
+            get {
+                object obj = ResourceManager.GetObject("imgRetornar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

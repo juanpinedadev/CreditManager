@@ -30,7 +30,7 @@ namespace CreditManager.Presentacion.Formulario
         {
             lblTitulo.Text = "Gestor de clientes";
             panelBase.Visible = true;
-            //AbrirModulo(new FormularioGestorClientes(), btnClientes);
+            AbrirModulo(new FormularioCliente(), btnClientes);
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)

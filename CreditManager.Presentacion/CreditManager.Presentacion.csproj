@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formulario\FormularioCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FormularioCliente.Designer.cs">
+      <DependentUpon>FormularioCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulario\FormularioLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formulario\FormularioCliente.resx">
+      <DependentUpon>FormularioCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FormularioLogin.resx">
       <DependentUpon>FormularioLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,7 +112,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Imagen\16px\" />
     <Folder Include="Reporte\DataSet\" />
     <Folder Include="Reporte\Diseño\" />
     <Folder Include="Reporte\Formularios\" />
@@ -131,6 +139,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icono.ico" />
+    <None Include="Imagen\16px\imgLimpiar.png" />
+    <None Include="Imagen\16px\imgGuardar.png" />
+    <None Include="Imagen\16px\imgActualizar.png" />
+    <None Include="Imagen\16px\imgRetornar.png" />
+    <None Include="Imagen\16px\imgReportePequeño.png" />
+    <None Include="Imagen\16px\imgEliminar.png" />
+    <None Include="Imagen\16px\imgAgregar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
