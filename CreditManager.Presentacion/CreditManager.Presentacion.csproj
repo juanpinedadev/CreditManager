@@ -69,6 +69,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporte\DataSet\DataSetMaestro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMaestro.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Formulario\FormularioCliente.resx">
       <DependentUpon>FormularioCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +102,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reporte\DataSet\DataSetMaestro.xsc">
+      <DependentUpon>DataSetMaestro.xsd</DependentUpon>
+    </None>
+    <None Include="Reporte\DataSet\DataSetMaestro.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMaestro.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporte\DataSet\DataSetMaestro.xss">
+      <DependentUpon>DataSetMaestro.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -112,7 +128,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Reporte\DataSet\" />
     <Folder Include="Reporte\Diseño\" />
     <Folder Include="Reporte\Formularios\" />
   </ItemGroup>
