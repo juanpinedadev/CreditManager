@@ -1,5 +1,6 @@
 ﻿using CreditManager.Entidad;
 using CreditManager.Negocio;
+using CreditManager.Presentacion.Reporte.Formularios;
 using System;
 using System.Data;
 using System.Drawing;
@@ -65,8 +66,8 @@ namespace CreditManager.Presentacion.Formulario
             }
             else
             {
-                //FormularioReporteCliente reporteCliente = new FormularioReporteCliente();
-                //reporteCliente.ShowDialog();
+                ReporteCliente reporteCliente = new ReporteCliente();
+                reporteCliente.ShowDialog();
             }
         }
 

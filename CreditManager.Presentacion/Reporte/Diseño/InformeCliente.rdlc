@@ -6,13 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.6367cm</Width>
+              <Width>2.81478cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5712cm</Width>
+              <Width>2.67703cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.07468cm</Width>
+              <Width>3.98853cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.08649cm</Width>
@@ -21,7 +21,7 @@
               <Width>2.68962cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>6.23503cm</Width>
+              <Width>5.15024cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -39,6 +39,7 @@
                             <TextRun>
                               <Value>Primer nombre</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -72,6 +73,7 @@
                             <TextRun>
                               <Value>Primer apellido</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -105,6 +107,7 @@
                             <TextRun>
                               <Value>N° documento</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -138,6 +141,7 @@
                             <TextRun>
                               <Value>Tipo documento</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -171,6 +175,7 @@
                             <TextRun>
                               <Value>Celular</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -204,6 +209,7 @@
                             <TextRun>
                               <Value>Correo Electronico</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -241,7 +247,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!PrimerNombre.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -271,7 +279,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!PrimerApellido.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -301,7 +311,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!NumeroDocumento.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -331,7 +343,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!TipoDocumento.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -361,7 +375,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!NumeroCelular.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -391,7 +407,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!CorreoElectronico.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -437,13 +455,14 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>0.42016cm</Top>
-        <Left>0.64813cm</Left>
+        <Left>0.59165cm</Left>
         <Height>1.2cm</Height>
-        <Width>20.29373cm</Width>
+        <Width>20.4067cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
+          <FontSize>9pt</FontSize>
         </Style>
       </Tablix>
     </ReportItems>
