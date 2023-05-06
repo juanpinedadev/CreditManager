@@ -2,8 +2,7 @@
 
 namespace CreditManager.Datos.Interface
 {
-    public interface IClienteRepositorio : IRepositorioGenerico<Cliente>
+    public interface IClienteRepositorio : IRepositorioGenerico<Cliente>, IValidable
     {
-        bool ValidarCorreoElectronico(string correoElectronico);
     }
 }

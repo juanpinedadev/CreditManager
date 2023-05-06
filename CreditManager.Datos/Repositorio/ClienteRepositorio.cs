@@ -75,6 +75,7 @@ namespace CreditManager.Datos.Repositorio
                 try
                 {
                     SqlCommand command = new SqlCommand("CrearCliente", connection);
+
                     command.Parameters.AddWithValue("@NumeroDocumento", cliente.NumeroDocumento);
                     command.Parameters.AddWithValue("@IdTipoDocumento", cliente.TipoDocumento.IdTipoDocumento);
                     command.Parameters.AddWithValue("@PrimerNombre", cliente.PrimerNombre);

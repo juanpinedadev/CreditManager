@@ -45,6 +45,7 @@
     <Compile Include="Conexion\ConexionMaestra.cs" />
     <Compile Include="Interface\IClienteRepositorio.cs" />
     <Compile Include="Interface\IRepositorioGenerico.cs" />
+    <Compile Include="Interface\IValidable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\ClienteRepositorio.cs" />
   </ItemGroup>
