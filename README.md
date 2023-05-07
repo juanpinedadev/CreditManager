@@ -1,10 +1,13 @@
 # Credit Manager 💰💳
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/juanpinedadev/CreditManager?color=yellow)](https://github.com/juanpinedadev/CreditManager/commits/main)
-[![GitHub issues](https://img.shields.io/github/issues/juanpinedadev/CreditManager?color=yellow)](https://github.com/juanpinedadev/CreditManager/issues)
 [![GitHub license](https://img.shields.io/github/license/juanpinedadev/CreditManager?color=yellow)](https://github.com/juanpinedadev/CreditManager/blob/main/LICENSE)
-![C#](https://img.shields.io/badge/C%23-7.0-yellow)
-![SQL Server](https://img.shields.io/badge/SQL%20Server-2017-yellow)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-2017-red)
+<a href="https://docs.microsoft.com/en-us/dotnet/csharp/">
+  <img alt="Language" src="https://img.shields.io/badge/Language-C%23-blue.svg">
+</a>
+<a href="https://dotnet.microsoft.com/">
+  <img alt="Framework" src="https://img.shields.io/badge/Framework-.NET%205-blueviolet.svg">
+</a>
 
 Credit Manager es un sistema de escritorio desarrollado con C#, SQL Server y .NET Framework para administrar y manejar información sobre créditos y préstamos. 💻📈
 
