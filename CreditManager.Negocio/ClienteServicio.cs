@@ -4,10 +4,19 @@ using System.Collections.Generic;
 
 namespace CreditManager.Negocio
 {
+    /// <summary>
+    /// Clase que implementa la lógica de negocio para los clientes.
+    /// </summary>
     public class ClienteServicio
     {
         private readonly ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
 
+        /// <summary>
+        /// Crea un nuevo cliente.
+        /// </summary>
+        /// <param name="cliente">El cliente a crear.</param>
+        /// <param name="mensaje">Un mensaje de salida que indica el resultado de la operación.</param>
+        /// <returns>El ID del cliente creado.</returns>
         public int Crear(Cliente cliente, out string mensaje)
         {
             mensaje = string.Empty;
@@ -74,6 +83,12 @@ namespace CreditManager.Negocio
             }
         }
 
+        /// <summary>
+        /// Actualiza un cliente existente.
+        /// </summary>
+        /// <param name="cliente">El cliente a actualizar.</param>
+        /// <param name="mensaje">Un mensaje de salida que indica el resultado de la operación.</param>
+        /// <returns>True si la actualización fue exitosa, false si no lo fue.</returns>
         public bool Actualizar(Cliente cliente, out string mensaje)
         {
             mensaje = string.Empty;
@@ -146,6 +161,12 @@ namespace CreditManager.Negocio
             }
         }
 
+        /// <summary>
+        /// Elimina un cliente existente.
+        /// </summary>
+        /// <param name="cliente">El cliente a eliminar.</param>
+        /// <param name="mensaje">Un mensaje de salida que indica el resultado de la operación.</param>
+        /// <returns>True si la eliminación fue exitosa, false si no lo fue.</returns>
         public bool Eliminar(Cliente cliente, out string mensaje)
         {
             mensaje = string.Empty;
@@ -170,11 +191,20 @@ namespace CreditManager.Negocio
             }
         }
 
+        /// <summary>
+        /// Obtiene una lista de todos los clientes.
+        /// </summary>
+        /// <returns>Una lista de objetos Cliente.</returns>
         public List<Cliente> ListarClientes()
         {
             return clienteRepositorio.Listar();
         }
 
+        /// <summary>
+        /// Valida un correo electrónico.
+        /// </summary>
+        /// <param name="correo">El correo electrónico a validar.</param>
+        /// <returns>True si el correo electrónico es válido, false si no lo es.</returns>
         public bool ValidarCorreoElectronico(string correo)
         {
             return clienteRepositorio.ValidarCorreoElectronico(correo);
