@@ -30,6 +30,8 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabConsulta = new System.Windows.Forms.TabPage();
+            this.contador = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.tablaDatos = new System.Windows.Forms.DataGridView();
@@ -49,7 +51,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtNumeroTelefono = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.boxTipoDocumento = new System.Windows.Forms.ComboBox();
+            this.comboBoxTiposDocumento = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtNumeroDocumento = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -66,8 +68,6 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnRetornar = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.contador = new System.Windows.Forms.Label();
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -107,6 +107,29 @@
             this.tabConsulta.TabIndex = 0;
             this.tabConsulta.Text = "Consulta";
             this.tabConsulta.UseVisualStyleBackColor = true;
+            // 
+            // contador
+            // 
+            this.contador.AutoSize = true;
+            this.contador.Font = new System.Drawing.Font("Arial", 10F);
+            this.contador.Location = new System.Drawing.Point(156, 19);
+            this.contador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.contador.Name = "contador";
+            this.contador.Size = new System.Drawing.Size(82, 16);
+            this.contador.TabIndex = 38;
+            this.contador.Text = "Cargando...";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label17.Location = new System.Drawing.Point(4, 18);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(156, 16);
+            this.label17.TabIndex = 39;
+            this.label17.Text = "Número de registros:";
             // 
             // label1
             // 
@@ -168,7 +191,7 @@
             this.tabMantenimiento.Controls.Add(this.label11);
             this.tabMantenimiento.Controls.Add(this.txtNumeroTelefono);
             this.tabMantenimiento.Controls.Add(this.label10);
-            this.tabMantenimiento.Controls.Add(this.boxTipoDocumento);
+            this.tabMantenimiento.Controls.Add(this.comboBoxTiposDocumento);
             this.tabMantenimiento.Controls.Add(this.label9);
             this.tabMantenimiento.Controls.Add(this.txtNumeroDocumento);
             this.tabMantenimiento.Controls.Add(this.label8);
@@ -346,6 +369,7 @@
             this.txtNumeroCelular.Name = "txtNumeroCelular";
             this.txtNumeroCelular.Size = new System.Drawing.Size(174, 23);
             this.txtNumeroCelular.TabIndex = 20;
+            this.txtNumeroCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroCelular_KeyPress);
             // 
             // label11
             // 
@@ -372,6 +396,7 @@
             this.txtNumeroTelefono.Name = "txtNumeroTelefono";
             this.txtNumeroTelefono.Size = new System.Drawing.Size(174, 23);
             this.txtNumeroTelefono.TabIndex = 18;
+            this.txtNumeroTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroTelefono_KeyPress);
             // 
             // label10
             // 
@@ -386,17 +411,17 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "Tipo de documento:";
             // 
-            // boxTipoDocumento
+            // comboBoxTiposDocumento
             // 
-            this.boxTipoDocumento.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.boxTipoDocumento.BackColor = System.Drawing.Color.White;
-            this.boxTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTipoDocumento.Enabled = false;
-            this.boxTipoDocumento.FormattingEnabled = true;
-            this.boxTipoDocumento.Location = new System.Drawing.Point(375, 188);
-            this.boxTipoDocumento.Name = "boxTipoDocumento";
-            this.boxTipoDocumento.Size = new System.Drawing.Size(175, 24);
-            this.boxTipoDocumento.TabIndex = 16;
+            this.comboBoxTiposDocumento.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBoxTiposDocumento.BackColor = System.Drawing.Color.White;
+            this.comboBoxTiposDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTiposDocumento.Enabled = false;
+            this.comboBoxTiposDocumento.FormattingEnabled = true;
+            this.comboBoxTiposDocumento.Location = new System.Drawing.Point(375, 188);
+            this.comboBoxTiposDocumento.Name = "comboBoxTiposDocumento";
+            this.comboBoxTiposDocumento.Size = new System.Drawing.Size(175, 24);
+            this.comboBoxTiposDocumento.TabIndex = 16;
             // 
             // label9
             // 
@@ -423,6 +448,7 @@
             this.txtNumeroDocumento.Name = "txtNumeroDocumento";
             this.txtNumeroDocumento.Size = new System.Drawing.Size(174, 23);
             this.txtNumeroDocumento.TabIndex = 14;
+            this.txtNumeroDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroDocumento_KeyPress);
             // 
             // label8
             // 
@@ -617,29 +643,6 @@
             this.btnRetornar.UseVisualStyleBackColor = true;
             this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click);
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label17.Location = new System.Drawing.Point(4, 18);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(156, 16);
-            this.label17.TabIndex = 39;
-            this.label17.Text = "Número de registros:";
-            // 
-            // contador
-            // 
-            this.contador.AutoSize = true;
-            this.contador.Font = new System.Drawing.Font("Arial", 10F);
-            this.contador.Location = new System.Drawing.Point(156, 19);
-            this.contador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.contador.Name = "contador";
-            this.contador.Size = new System.Drawing.Size(82, 16);
-            this.contador.TabIndex = 38;
-            this.contador.Text = "Cargando...";
-            // 
             // btnCrear
             // 
             this.btnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -749,7 +752,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtNumeroTelefono;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox boxTipoDocumento;
+        private System.Windows.Forms.ComboBox comboBoxTiposDocumento;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtNumeroDocumento;
         private System.Windows.Forms.Label label8;

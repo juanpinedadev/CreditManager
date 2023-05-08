@@ -47,7 +47,7 @@ namespace CreditManager.Negocio
 
             if (cliente.TipoDocumento.IdTipoDocumento <= 0)
             {
-                mensaje = "El tipo de documento del cliente no puede ser nulo o vacío";
+                mensaje = "Por favor seleccione un tipo de documento válido.";
                 return 0;
             }
 

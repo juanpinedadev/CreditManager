@@ -2,6 +2,7 @@
 using CreditManager.Negocio;
 using CreditManager.Presentacion.Reporte.Formularios;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -11,11 +12,13 @@ namespace CreditManager.Presentacion.Formulario
 {
     public partial class FormularioCliente : Form
     {
-
-
         #region Constructores
+        /// <summary>
+        /// Constructor de la clase FormularioCliente.
+        /// </summary>
         public FormularioCliente()
         {
+            // Inicializa el formulario y sus componentes.
             InitializeComponent();
         }
         #endregion
@@ -23,6 +26,10 @@ namespace CreditManager.Presentacion.Formulario
         #region Variables
         //Servicio que nos permitirá interactuar con los clientes en la base de datos
         private ClienteServicio clienteServicio = new ClienteServicio();
+
+        //Servicio que nos permitirá interactuar con los tipos de clientes en la base de datos
+        private TipoDocumentoServicio tipoDocumentoServicio = new TipoDocumentoServicio();
+
         int idCliente = 0; //Se usa para captar el cliente que seleccione en la tabla
         string nombreCliente; //Se usa para acpturar el nombre del cliente que seleccione en la tabla
         #endregion
@@ -31,6 +38,7 @@ namespace CreditManager.Presentacion.Formulario
         private void FormularioCliente_Load(object sender, EventArgs e)
         {
             ListarClientes();
+            ListarTiposDocumento();
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
@@ -79,6 +87,7 @@ namespace CreditManager.Presentacion.Formulario
             if (dialogResult == DialogResult.Yes)
             {
                 ListarClientes();
+                ListarTiposDocumento();
                 LimpiarFormularioRegistro();
                 CambiarEstadoBotonesCRUD(true);
                 CambiarEstadoFormulario(false);
@@ -101,6 +110,7 @@ namespace CreditManager.Presentacion.Formulario
         private void btnRetornar_Click(object sender, EventArgs e)
         {
             ListarClientes();
+            ListarTiposDocumento();
             LimpiarFormularioRegistro();
             CambiarEstadoBotonesCRUD(true);
             CambiarEstadoFormulario(false);
@@ -137,6 +147,37 @@ namespace CreditManager.Presentacion.Formulario
                 e.CellStyle.ForeColor = Color.Gray;
             }
         }
+
+        private void txtNumeroDocumento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Este campo solo admite números.", "Atención",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+            }
+        }
+
+        private void txtNumeroTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Este campo solo admite números.", "Atención",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+            }
+        }
+
+        private void txtNumeroCelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Este campo solo admite números.", "Atención",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+            }
+        }
+        
         #endregion
 
         #region Funciones
@@ -179,7 +220,7 @@ namespace CreditManager.Presentacion.Formulario
             txtPrimerApellido.Enabled = estado;
             txtSegundoApellido.Enabled = estado;
             txtNumeroDocumento.Enabled = estado;
-            boxTipoDocumento.Enabled = estado;
+            comboBoxTiposDocumento.Enabled = estado;
             boxEstado.Enabled = estado;
             txtNumeroTelefono.Enabled = estado;
             txtNumeroCelular.Enabled = estado;
@@ -248,12 +289,35 @@ namespace CreditManager.Presentacion.Formulario
             }
         }
 
+        private void ListarTiposDocumento()
+        {
+            try
+            {
+                List<TipoDocumento> tiposDocumento = tipoDocumentoServicio.Listar(); // suponiendo que tienes una función que devuelve la lista de tipos de documento
+
+                // Agrega la opción "Seleccionar"
+                tiposDocumento.Insert(0, new TipoDocumento { IdTipoDocumento = 0, Tipo = "Seleccionar" });
+
+                // Asigna la lista al ComboBox
+                comboBoxTiposDocumento.DataSource = tiposDocumento;
+                comboBoxTiposDocumento.DisplayMember = "Tipo";
+                comboBoxTiposDocumento.ValueMember = "IdTipoDocumento";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void CrearCliente()
         {
             try
             {
                 //Inicializamos el mensaje de salida (vacio) para más adelante asignarle un valor
                 string mensaje = string.Empty;
+
+                //Cremos el tipo de documento que será seleccionado
+                TipoDocumento tipoDocumentoSeleccionado = (TipoDocumento)comboBoxTiposDocumento.SelectedItem;
 
                 //Creamos un objeto cliente y le asignamos los campos
                 Cliente cliente = new Cliente()
@@ -264,7 +328,8 @@ namespace CreditManager.Presentacion.Formulario
                     PrimerApellido = txtPrimerApellido.Text,
                     SegundoApellido = txtSegundoApellido.Text,
                     NumeroDocumento = txtNumeroDocumento.Text,
-                    TipoDocumento = new TipoDocumento() { IdTipoDocumento = 1, Tipo = "Cedula" }, //Arreglar
+                    TipoDocumento = tipoDocumentoSeleccionado,
+                    //  TipoDocumento = new TipoDocumento() { IdTipoDocumento = (int)comboBoxTiposDocumento.SelectedValue, Tipo = comboBoxTiposDocumento.Text },
                     NumeroTelefono = txtNumeroTelefono.Text,
                     NumeroCelular = txtNumeroCelular.Text,
                     Direccion = txtDireccion.Text,

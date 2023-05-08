@@ -45,9 +45,11 @@
     <Compile Include="Conexion\ConexionMaestra.cs" />
     <Compile Include="Interface\IClienteRepositorio.cs" />
     <Compile Include="Interface\IRepositorioGenerico.cs" />
+    <Compile Include="Interface\ITipoDocumentoRepositorio.cs" />
     <Compile Include="Interface\IValidable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\ClienteRepositorio.cs" />
+    <Compile Include="Repositorio\TipoDocumentoRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CreditManager.Entidad\CreditManager.Entidad.csproj">
