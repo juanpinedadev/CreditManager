@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioPrincipal));
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.panelLateral = new System.Windows.Forms.Panel();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.btnInicio = new System.Windows.Forms.Button();
             this.panelInferior = new System.Windows.Forms.Panel();
             this.panelBase = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.panelSuperior.SuspendLayout();
             this.panelLateral.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +54,17 @@
             this.panelSuperior.Name = "panelSuperior";
             this.panelSuperior.Size = new System.Drawing.Size(834, 30);
             this.panelSuperior.TabIndex = 0;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.lblTitulo.Location = new System.Drawing.Point(3, 6);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(121, 19);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "Menú principal";
             // 
             // panelLateral
             // 
@@ -199,6 +210,7 @@
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // panelInferior
             // 
@@ -216,17 +228,6 @@
             this.panelBase.Name = "panelBase";
             this.panelBase.Size = new System.Drawing.Size(759, 526);
             this.panelBase.TabIndex = 3;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.lblTitulo.Location = new System.Drawing.Point(3, 6);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(121, 19);
-            this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "Menú principal";
             // 
             // FormularioPrincipal
             // 

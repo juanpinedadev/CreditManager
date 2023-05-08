@@ -54,6 +54,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,6 +71,12 @@
     </Compile>
     <Compile Include="Formulario\FormularioCliente.Designer.cs">
       <DependentUpon>FormularioCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FormularioInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FormularioInicio.Designer.cs">
+      <DependentUpon>FormularioInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Formulario\FormularioLogin.cs">
       <SubType>Form</SubType>
@@ -98,6 +105,9 @@
     </Compile>
     <EmbeddedResource Include="Formulario\FormularioCliente.resx">
       <DependentUpon>FormularioCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormularioInicio.resx">
+      <DependentUpon>FormularioInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FormularioLogin.resx">
       <DependentUpon>FormularioLogin.cs</DependentUpon>
@@ -178,6 +188,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icono.ico" />
+    <None Include="Imagen\512px\empleado.png" />
+    <None Include="Imagen\512px\cliente.png" />
+    <None Include="Imagen\512px\bolsa-de-dinero.png" />
+    <None Include="Imagen\512px\logo.png" />
     <None Include="Imagen\16px\imgLimpiar.png" />
     <None Include="Imagen\16px\imgGuardar.png" />
     <None Include="Imagen\16px\imgActualizar.png" />

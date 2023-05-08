@@ -23,9 +23,14 @@ namespace CreditManager.Presentacion.Formulario
         
         private void FormularioPrincipal_Load(object sender, EventArgs e)
         {
-
+            AbrirModulo(new FormularioInicio(), btnInicio);
         }
-        
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            AbrirModulo(new FormularioInicio(), btnInicio);
+        }
+
         private void btnClientes_Click(object sender, EventArgs e)
         {
             lblTitulo.Text = "Gestor de clientes";
