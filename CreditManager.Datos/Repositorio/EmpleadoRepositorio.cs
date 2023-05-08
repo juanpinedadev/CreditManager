@@ -157,7 +157,7 @@ namespace CreditManager.Datos.Repositorio
                     consulta.Append("e.PrimerApellido, e.SegundoApellido, e.NumeroDocumento, td.IdTipoDocumento,");
                     consulta.Append("td.Tipo AS TipoDocumento, e.NumeroTelefono, e.Direccion, ");
                     consulta.Append("e.NumeroCelular, e.CorreoElectronico, e.FechaRegistro, e.Estado ");
-                    consulta.Append("FROM Empleado e ");
+                    consulta.Append("FROM Empleados e ");
                     consulta.Append("INNER JOIN TiposDocumento td ON e.IdTipoDocumento = td.IdTipoDocumento;");
 
                     SqlCommand command = new SqlCommand(consulta.ToString(), connection)
