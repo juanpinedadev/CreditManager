@@ -1,6 +1,6 @@
 ﻿namespace CreditManager.Presentacion.Formulario
 {
-    partial class FormularioCliente
+    partial class FormularioEmpleado
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnCrear = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabConsulta = new System.Windows.Forms.TabPage();
             this.contador = new System.Windows.Forms.Label();
@@ -37,7 +41,7 @@
             this.tablaDatos = new System.Windows.Forms.DataGridView();
             this.tabMantenimiento = new System.Windows.Forms.TabPage();
             this.txtIndice = new System.Windows.Forms.TextBox();
-            this.txtIdCliente = new System.Windows.Forms.TextBox();
+            this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.boxEstado = new System.Windows.Forms.ComboBox();
@@ -68,15 +72,67 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnRetornar = new System.Windows.Forms.Button();
-            this.btnCrear = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnReporte = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
             this.tabMantenimiento.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCrear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCrear.Image = global::CreditManager.Presentacion.Properties.Resources.imgAgregar;
+            this.btnCrear.Location = new System.Drawing.Point(353, 484);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(88, 30);
+            this.btnCrear.TabIndex = 7;
+            this.btnCrear.Text = "Crear";
+            this.btnCrear.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.Image = global::CreditManager.Presentacion.Properties.Resources.imgActualizar;
+            this.btnActualizar.Location = new System.Drawing.Point(447, 484);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(96, 30);
+            this.btnActualizar.TabIndex = 6;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.Image = global::CreditManager.Presentacion.Properties.Resources.imgEliminar;
+            this.btnEliminar.Location = new System.Drawing.Point(549, 484);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(96, 30);
+            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReporte.Image = global::CreditManager.Presentacion.Properties.Resources.imgReportePequeño;
+            this.btnReporte.Location = new System.Drawing.Point(651, 484);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(96, 30);
+            this.btnReporte.TabIndex = 4;
+            this.btnReporte.Text = "Reporte";
+            this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // tabControl
             // 
@@ -90,7 +146,7 @@
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(734, 466);
-            this.tabControl.TabIndex = 37;
+            this.tabControl.TabIndex = 38;
             // 
             // tabConsulta
             // 
@@ -177,7 +233,7 @@
             // tabMantenimiento
             // 
             this.tabMantenimiento.Controls.Add(this.txtIndice);
-            this.tabMantenimiento.Controls.Add(this.txtIdCliente);
+            this.tabMantenimiento.Controls.Add(this.txtIdEmpleado);
             this.tabMantenimiento.Controls.Add(this.lblTitulo);
             this.tabMantenimiento.Controls.Add(this.label16);
             this.tabMantenimiento.Controls.Add(this.boxEstado);
@@ -230,18 +286,18 @@
             this.txtIndice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtIndice.Visible = false;
             // 
-            // txtIdCliente
+            // txtIdEmpleado
             // 
-            this.txtIdCliente.BackColor = System.Drawing.Color.DarkGray;
-            this.txtIdCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdCliente.ForeColor = System.Drawing.Color.Black;
-            this.txtIdCliente.Location = new System.Drawing.Point(35, 6);
-            this.txtIdCliente.Name = "txtIdCliente";
-            this.txtIdCliente.Size = new System.Drawing.Size(22, 23);
-            this.txtIdCliente.TabIndex = 36;
-            this.txtIdCliente.Text = "0";
-            this.txtIdCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtIdCliente.Visible = false;
+            this.txtIdEmpleado.BackColor = System.Drawing.Color.DarkGray;
+            this.txtIdEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdEmpleado.ForeColor = System.Drawing.Color.Black;
+            this.txtIdEmpleado.Location = new System.Drawing.Point(35, 6);
+            this.txtIdEmpleado.Name = "txtIdEmpleado";
+            this.txtIdEmpleado.Size = new System.Drawing.Size(22, 23);
+            this.txtIdEmpleado.TabIndex = 36;
+            this.txtIdEmpleado.Text = "0";
+            this.txtIdEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIdEmpleado.Visible = false;
             // 
             // lblTitulo
             // 
@@ -252,9 +308,9 @@
             this.lblTitulo.Location = new System.Drawing.Point(176, 25);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(165, 24);
+            this.lblTitulo.Size = new System.Drawing.Size(194, 24);
             this.lblTitulo.TabIndex = 35;
-            this.lblTitulo.Text = "Registrar cliente";
+            this.lblTitulo.Text = "Registrar empleado";
             // 
             // label16
             // 
@@ -643,63 +699,7 @@
             this.btnRetornar.UseVisualStyleBackColor = true;
             this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click);
             // 
-            // btnCrear
-            // 
-            this.btnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCrear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCrear.Image = global::CreditManager.Presentacion.Properties.Resources.imgAgregar;
-            this.btnCrear.Location = new System.Drawing.Point(353, 484);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(88, 30);
-            this.btnCrear.TabIndex = 3;
-            this.btnCrear.Text = "Crear";
-            this.btnCrear.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnCrear.UseVisualStyleBackColor = true;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnActualizar.Image = global::CreditManager.Presentacion.Properties.Resources.imgActualizar;
-            this.btnActualizar.Location = new System.Drawing.Point(447, 484);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(96, 30);
-            this.btnActualizar.TabIndex = 2;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.Image = global::CreditManager.Presentacion.Properties.Resources.imgEliminar;
-            this.btnEliminar.Location = new System.Drawing.Point(549, 484);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(96, 30);
-            this.btnEliminar.TabIndex = 1;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReporte.Image = global::CreditManager.Presentacion.Properties.Resources.imgReportePequeño;
-            this.btnReporte.Location = new System.Drawing.Point(651, 484);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(96, 30);
-            this.btnReporte.TabIndex = 0;
-            this.btnReporte.Text = "Reporte";
-            this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnReporte.UseVisualStyleBackColor = true;
-            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
-            // 
-            // FormularioCliente
+            // FormularioEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -712,9 +712,9 @@
             this.Font = new System.Drawing.Font("Arial", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FormularioCliente";
-            this.Text = "FormularioCliente";
-            this.Load += new System.EventHandler(this.FormularioCliente_Load);
+            this.Name = "FormularioEmpleado";
+            this.Text = "FormularioEmpleado";
+            this.Load += new System.EventHandler(this.FormularioEmpleado_Load);
             this.tabControl.ResumeLayout(false);
             this.tabConsulta.ResumeLayout(false);
             this.tabConsulta.PerformLayout();
@@ -727,18 +727,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnReporte;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabConsulta;
+        private System.Windows.Forms.Label contador;
+        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.DataGridView tablaDatos;
         private System.Windows.Forms.TabPage tabMantenimiento;
         private System.Windows.Forms.TextBox txtIndice;
-        private System.Windows.Forms.TextBox txtIdCliente;
+        private System.Windows.Forms.TextBox txtIdEmpleado;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox boxEstado;
@@ -769,7 +771,5 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnRetornar;
-        private System.Windows.Forms.Label contador;
-        private System.Windows.Forms.Label label17;
     }
 }

@@ -38,6 +38,11 @@ namespace CreditManager.Presentacion.Formulario
             AbrirModulo(new FormularioCliente(), btnClientes);
         }
 
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            AbrirModulo(new FormularioEmpleado(), btnEmpleados);
+        }
+
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             DialogResult dialogo = MessageBox.Show("¿Desea cerrar el sesión?",
@@ -107,5 +112,7 @@ namespace CreditManager.Presentacion.Formulario
         }
 
         #endregion
+
+
     }
 }
