@@ -197,9 +197,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icono.ico" />
-    <None Include="Imagen\512px\empleado.png" />
-    <None Include="Imagen\512px\cliente.png" />
-    <None Include="Imagen\512px\bolsa-de-dinero.png" />
     <None Include="Imagen\512px\logo.png" />
     <None Include="Imagen\16px\imgLimpiar.png" />
     <None Include="Imagen\16px\imgGuardar.png" />
