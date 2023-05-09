@@ -45,6 +45,7 @@
     <Compile Include="EmpleadoServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoDocumentoServicio.cs" />
+    <Compile Include="TipoPlazoServicio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CreditManager.Datos\CreditManager.Datos.csproj">
