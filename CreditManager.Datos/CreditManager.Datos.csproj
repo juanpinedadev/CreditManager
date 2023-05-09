@@ -45,6 +45,7 @@
     <Compile Include="Conexion\ConexionMaestra.cs" />
     <Compile Include="Interface\IClienteRepositorio.cs" />
     <Compile Include="Interface\IEmpleadoRepositorio.cs" />
+    <Compile Include="Interface\IPagoRepositorio.cs" />
     <Compile Include="Interface\IPrestamoRepositorio.cs" />
     <Compile Include="Interface\IRepositorioGenerico.cs" />
     <Compile Include="Interface\ITipoDocumentoRepositorio.cs" />
