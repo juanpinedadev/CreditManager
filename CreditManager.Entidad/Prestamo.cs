@@ -6,6 +6,7 @@ namespace CreditManager.Entidad
     {
         public int IdPrestamo { get; set; }
         public Cliente Solicitante { get; set; }
+        public TipoPlazo TipoPlazo { get; set; }
         public decimal MontoSolicitado { get; set; }
         public decimal MontoTotalAPagar { get; set; } 
         public int NumeroCuotas { get; set; } 
