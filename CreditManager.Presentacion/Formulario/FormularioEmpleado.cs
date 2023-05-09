@@ -5,6 +5,7 @@ using System.Linq;
 using System;
 using System.Windows.Forms;
 using System.Drawing;
+using CreditManager.Presentacion.Reporte.Formularios;
 
 namespace CreditManager.Presentacion.Formulario
 {
@@ -65,7 +66,17 @@ namespace CreditManager.Presentacion.Formulario
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-
+            if (tablaDatos.Rows.Count <= 0)
+            {
+                MessageBox.Show("No hay registros de empleados para generar un reporte.",
+                    "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                ReporteEmpleado reporteEmpleado = new ReporteEmpleado();
+                reporteEmpleado.ShowDialog();
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
