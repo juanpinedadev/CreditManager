@@ -26,7 +26,7 @@ namespace CreditManager.Presentacion.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-F1L8893\\SQLEXPRESS;Initial Catalog=CreditControlDB;Integrated" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-GK607QR\\SQLEXPRESS;Initial Catalog=CreditControlDB;Integrated" +
             " Security=True")]
         public string conexion {
             get {
