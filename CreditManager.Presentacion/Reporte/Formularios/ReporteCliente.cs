@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Windows.Forms;
 
 namespace CreditManager.Presentacion.Reporte.Formularios
@@ -12,10 +13,21 @@ namespace CreditManager.Presentacion.Reporte.Formularios
 
         private void ReporteCliente_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dataSetMaestro.ListarClientes' Puede moverla o quitarla según sea necesario.
-            this.listarClientesTableAdapter.Fill(this.dataSetMaestro.ListarClientes);
-            NombrarFormulario("clientes");
-            this.reportViewer.RefreshReport();
+            try
+            {
+                // Cargar los datos en el control de informe
+                this.listarClientesTableAdapter.Fill(this.dataSetMaestro.ListarClientes);
+
+                // Nombrar el formulario
+                NombrarFormulario("clientes");
+
+                // Actualizar y mostrar el informe en formato de impresión
+                reportViewer.SetDisplayMode(DisplayMode.PrintLayout);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se produjo un error al cargar los datos en el informe: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #region Funciones

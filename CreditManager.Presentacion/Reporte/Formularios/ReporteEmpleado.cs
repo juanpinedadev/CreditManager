@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Windows.Forms;
 
 namespace CreditManager.Presentacion.Reporte.Formularios
@@ -30,10 +31,21 @@ namespace CreditManager.Presentacion.Reporte.Formularios
 
         private void ReporteEmpleado_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dataSetMaestro.ListarEmpleados' Puede moverla o quitarla según sea necesario.
-            this.listarEmpleadosTableAdapter.Fill(this.dataSetMaestro.ListarEmpleados);
-            NombrarFormulario("empleados");
-            this.reportViewer1.RefreshReport();
+            try
+            {
+                // Cargar los datos en el control de informe
+                this.listarEmpleadosTableAdapter.Fill(this.dataSetMaestro.ListarEmpleados);
+
+                // Nombrar el formulario
+                NombrarFormulario("clientes");
+
+                // Actualizar y mostrar el informe en formato de impresión
+                reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se produjo un error al cargar los datos en el informe: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -31,6 +31,16 @@ namespace CreditManager.Presentacion.Formulario
             AbrirModulo(new FormularioInicio(), btnInicio);
         }
 
+        private void btnPrestamos_Click(object sender, EventArgs e)
+        {
+            AbrirModulo(new FormularioPrestamo(), btnPrestamos);
+        }
+
+        private void btnPagos_Click(object sender, EventArgs e)
+        {
+            AbrirModulo(new FormularioPago(), btnPagos);
+        }
+
         private void btnClientes_Click(object sender, EventArgs e)
         {
             lblTitulo.Text = "Gestor de clientes";
@@ -111,8 +121,7 @@ namespace CreditManager.Presentacion.Formulario
             AbrirNuevoFormulario(panel);
         }
 
+
         #endregion
-
-
     }
 }

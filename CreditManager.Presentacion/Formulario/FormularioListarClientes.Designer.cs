@@ -59,6 +59,7 @@
             this.tablaDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaDatos.Size = new System.Drawing.Size(558, 394);
             this.tablaDatos.TabIndex = 0;
+            this.tablaDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaDatos_CellDoubleClick);
             this.tablaDatos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.tablaDatos_CellFormatting);
             // 
             // NumeroDocumento
@@ -121,7 +122,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(400, 400);
+            this.MinimumSize = new System.Drawing.Size(600, 500);
             this.Name = "FormularioListarClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de clientes activos:";

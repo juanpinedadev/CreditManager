@@ -16,6 +16,11 @@ namespace CreditManager.Presentacion.Formulario
         /// <summary>
         /// 
         /// </summary>
+        public Cliente cliente { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public FormularioListarClientes()
         {
             InitializeComponent();
@@ -78,6 +83,24 @@ namespace CreditManager.Presentacion.Formulario
             catch (FormatException ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void tablaDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index_row = e.RowIndex;
+            int index_colum = e.ColumnIndex;
+
+            if (index_row >= 0 && index_colum >= 0)
+            {
+                cliente = new Cliente()
+                {
+                    NumeroDocumento = tablaDatos.Rows[index_row].Cells["NumeroDocumento"].Value.ToString(),
+                    //PrimerApellido = tablaDatos .Rows[index_row].Cells["PrimerApellido"].Value.ToString()
+                };
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
         }
     }

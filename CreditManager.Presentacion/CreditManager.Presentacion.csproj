@@ -105,6 +105,18 @@
     <Compile Include="Formulario\FormularioLogin.Designer.cs">
       <DependentUpon>FormularioLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulario\FormularioPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FormularioPago.Designer.cs">
+      <DependentUpon>FormularioPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FormularioPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FormularioPrestamo.Designer.cs">
+      <DependentUpon>FormularioPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulario\FormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +156,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FormularioLogin.resx">
       <DependentUpon>FormularioLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormularioPago.resx">
+      <DependentUpon>FormularioPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormularioPrestamo.resx">
+      <DependentUpon>FormularioPrestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>

@@ -175,6 +175,7 @@
             this.btnPagos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPagos.UseVisualStyleBackColor = false;
+            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
             // 
             // btnPrestamos
             // 
@@ -193,6 +194,7 @@
             this.btnPrestamos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPrestamos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPrestamos.UseVisualStyleBackColor = false;
+            this.btnPrestamos.Click += new System.EventHandler(this.btnPrestamos_Click);
             // 
             // btnInicio
             // 
